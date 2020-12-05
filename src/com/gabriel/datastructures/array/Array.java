@@ -44,6 +44,24 @@ public class Array {
         }
         return false;
     }
+    
+    public boolean addElement(int position, String element) {
+        if (!(position >= 0 && position < size)) {
+            throw new IllegalArgumentException("Invalid position");
+        }
+
+        // 0 1 2 3 4 5 6 size is 5
+        // B C E F G + +
+        //
+        for (int i = this.size-1; i >= position; i--) {
+            this.elements[i + 1] = this.elements[i];
+        }
+        //i=4
+        this.elements[position] = element;
+        this.size++;
+
+        return true;
+    }
 
     public String search(int position) {
         if (!(position >= 0 && position < size)) {
@@ -73,11 +91,12 @@ public class Array {
 
         for (int i = 0; i < this.size-1; i++) {
             s.append(this.elements[i]);
-            s.append(" ,");
+            s.append(", ");
         }
         if (this.size > 0) {
             s.append(this.elements[this.size-1]);
         }
+        s.append("]");
         return s.toString();
     }
 
