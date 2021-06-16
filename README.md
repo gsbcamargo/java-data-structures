@@ -1,5 +1,5 @@
 # Data Structures using Java!
-## Helping anyone that wants (including myself) to understand data structures!
+## Helping anyone that want (including myself) to understand data structures!
 
 Every single data structure that will be shown here is going to be written from scratch, without making use of java libraries such as "java.util".
 
