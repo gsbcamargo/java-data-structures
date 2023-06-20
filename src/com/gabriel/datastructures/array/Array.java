@@ -47,10 +47,7 @@ public class Array {
     }
     
     public boolean addElement(int position, String element) {
-        if (!(position >= 0 && position < size)) {
-            throw new IllegalArgumentException("Invalid position.");
-        }
-
+        checkIfPositionIsValid(position);
         this.increaseSize();
 
         // 0 1 2 3 4 5 6 size is 5
@@ -77,9 +74,7 @@ public class Array {
     }
 
     public String search(int position) {
-        if (!(position >= 0 && position < size)) {
-            throw new IllegalArgumentException("Invalid position.");
-        }
+        checkIfPositionIsValid(position);
         return this.elements[position];
     }
 
@@ -90,6 +85,10 @@ public class Array {
             }
         }
         return -1;
+    }
+
+    public void removeElement(int position) {
+        checkIfPositionIsValid(position);
     }
 
     public int size() {
@@ -113,7 +112,9 @@ public class Array {
         return s.toString();
     }
 
+    private void checkIfPositionIsValid(int position) {
+        if (!(position >= 0 && position < size)) {
+            throw new IllegalArgumentException("Invalid position.");
+        }
+    }
 }
-
-
-
