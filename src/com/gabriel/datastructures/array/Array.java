@@ -37,6 +37,7 @@ public class Array {
 
     // no exception treatment needed
     public boolean addElement(String element) {
+        this.increaseSize();
         if (this.size < this.elements.length) {
             this.elements[this.size] = element;
             this.size++;
@@ -47,12 +48,14 @@ public class Array {
     
     public boolean addElement(int position, String element) {
         if (!(position >= 0 && position < size)) {
-            throw new IllegalArgumentException("Invalid position");
+            throw new IllegalArgumentException("Invalid position.");
         }
+
+        this.increaseSize();
 
         // 0 1 2 3 4 5 6 size is 5
         // B C E F G + +
-        //
+        // move all elements
         for (int i = this.size-1; i >= position; i--) {
             this.elements[i + 1] = this.elements[i];
         }
@@ -63,9 +66,19 @@ public class Array {
         return true;
     }
 
+    public void increaseSize() {
+        if (this.size == this.elements.length) {
+            String[] newElements = new String[this.elements.length * 2];
+            for (int i = 0; i < this.size; i++) {
+                newElements[i] = this.elements[i];
+            }
+            this.elements = newElements;
+        }
+    }
+
     public String search(int position) {
         if (!(position >= 0 && position < size)) {
-            throw new IllegalArgumentException("Invalid position");
+            throw new IllegalArgumentException("Invalid position.");
         }
         return this.elements[position];
     }

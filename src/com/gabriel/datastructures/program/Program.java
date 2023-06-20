@@ -26,5 +26,17 @@ public class Program {
 
         System.out.println(array);
 
+
+        // testing increaseSize() method
+        Array array2 = new Array(3);
+
+        array2.addElement("A");
+        array2.addElement("B");
+        array2.addElement("C");
+        array2.addElement("D");
+        array2.addElement("E");
+
+
+        System.out.println(array2);
     }
 }
