@@ -8,6 +8,7 @@ I'm positive this is definetely going to help me understand how data structures 
 
 ## Data Structures currently available (linked directly to the respective folder).
 - [Array](https://github.com/gsbcamargo/java-data-structures/tree/main/src/com/gabriel/datastructures/array)
+- [Graph](https://github.com/gsbcamargo/java-data-structures/tree/main/src/com/gabriel/datastructures/graph) - Unfinished
 
 
 # 🇧🇷
@@ -20,3 +21,5 @@ Estou certo de que isso vai definitivamente me ajudar a entender como as estrutu
 
 ## Estruturas de Dados atualmente disponíveis (linkadas diretamente à respectiva pasta).
 - [Array](https://github.com/gsbcamargo/java-data-structures/tree/main/src/com/gabriel/datastructures/array)
+- [Graph](https://github.com/gsbcamargo/java-data-structures/tree/main/src/com/gabriel/datastructures/graph) - Inacabado
+
